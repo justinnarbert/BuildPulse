@@ -1,0 +1,6 @@
+// Groovy DSL Script to invoke run.sh file
+
+def sout = new StringBuffer(),serr = new StringBuffer()
+def proc = './run.sh'.execute()
+proc.waitForProcessOutput(sout,serr)
+println "out> $sout\nerr> $serr"
